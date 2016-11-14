@@ -1,38 +1,20 @@
-# \<tmp2\>
-
-
-
-## Install the Polymer-CLI
-
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
-
-## Viewing Your Application
+* `polymer build` 
 
 ```
-$ polymer serve
+info:    Preparing build...
+info:    Building application...
+info:    Generating build/unbundled...
+info:    Generating build/bundled...
+error:   Promise rejection: Error: file path is not in root: C:\Sources\Projects\bower_components\script-element\hello-world.js (C:\Sources\Projects\tmp2)
+error:   Error: file path is not in root: C:\Sources\Projects\bower_components\script-element\hello-world.js (C:\Sources\Projects\tmp2)
+    at Object.urlFromPath (C:\Users\s.rijken\AppData\Roaming\npm\node_modules\polymer-cli\node_modules\polymer-build\lib\path-transformers.js:41:15)
+    at StreamAnalyzer.getFile (C:\Users\s.rijken\AppData\Roaming\npm\node_modules\polymer-cli\node_modules\polymer-build\lib\analyzer.js:107:39)
+    at StreamResolver.accept (C:\Users\s.rijken\AppData\Roaming\npm\node_modules\polymer-cli\node_modules\polymer-build\lib\analyzer.js:210:34)
+    at FileLoader.request (C:\Users\s.rijken\AppData\Roaming\npm\node_modules\polymer-cli\node_modules\hydrolysis\lib\loader\file-loader.js:64:27)
+    at Object.<anonymous> (C:\Users\s.rijken\AppData\Roaming\npm\node_modules\polymer-cli\node_modules\vulcanize\lib\vulcan.js:318:26)
+    at Array.map (native)
+    at Object.inlineScripts (C:\Users\s.rijken\AppData\Roaming\npm\node_modules\polymer-cli\node_modules\vulcanize\lib\vulcan.js:311:34)
+    at Object.<anonymous> (C:\Users\s.rijken\AppData\Roaming\npm\node_modules\polymer-cli\node_modules\vulcanize\lib\vulcan.js:458:21)
+    at run (C:\Users\s.rijken\AppData\Roaming\npm\node_modules\polymer-cli\node_modules\core-js\modules\es6.promise.js:87:22)
+    at C:\Users\s.rijken\AppData\Roaming\npm\node_modules\polymer-cli\node_modules\core-js\modules\es6.promise.js:100:28
 ```
-
-## Building Your Application
-
-```
-$ polymer build
-```
-
-This will create a `build/` folder with `bundled/` and `unbundled/` sub-folders
-containing a bundled (Vulcanized) and unbundled builds, both run through HTML,
-CSS, and JS optimizers.
-
-You can serve the built versions by giving `polymer serve` a folder to serve
-from:
-
-```
-$ polymer serve build/bundled
-```
-
-## Running Tests
-
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
