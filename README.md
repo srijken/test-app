@@ -1,3 +1,4 @@
+* `bower install`
 * `polymer build` 
 
 ```
